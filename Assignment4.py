@@ -6,7 +6,7 @@ numWords = 0
 numChars = 0
 
 # we are going to use for loop
-with open (filename, 'r') as file:
+with open (filename, 'w') as file:
 	for line in file:
 		#Let's create a file for words
 		wordList = line.split()
