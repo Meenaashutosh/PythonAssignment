@@ -8,7 +8,7 @@ print(platform.release())
 
 #Output
 '''
-python second.py
-demo1
+demo-1
 Linux-3.10.0-514.21.1.el7.x86_64-x86_64-with-centos-7.3.1611-Core
-3.10.0-514.21.1.el7.x86_64 '''
+3.10.0-514.21.1.el7.x86_64
+ '''
