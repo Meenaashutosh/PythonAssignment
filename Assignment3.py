@@ -7,10 +7,8 @@ print "Opened database successfully";
 # prepare a cursor object using cursor() method 
 cursor = conn.cursor()
 
-
- 
 # Create table as per requirement 
-sql = """CREATE TABLE EMPLOYEE5 ( 
+sql = """CREATE TABLE EMP1 ( 
          FIRST_NAME  CHAR(20) NOT NULL, 
          LAST_NAME  CHAR(20), 
          AGE INT,   
@@ -21,13 +19,13 @@ sql = """CREATE TABLE EMPLOYEE5 (
 cursor.execute(sql) 
 print "table create successfully" 
 # insert value in table 
-cursor.execute ("INSERT INTO EMPLOYEE5(FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME) \ 
-     VALUES ('Ashutosh', 'Meena', 24, 'male', 25000.00 )"); 
-print "Records insertsuccessfully" 
+cursor.execute ("INSERT INTO EMP1(FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME) \
+ VALUES ('Ashutosh', 'Meena', 24, 'male', 25000.00 )"); 
+print "Records insert successfully" 
  
  
  #display data here 
- cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMPLOYEE5 ") 
+ cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMP1 ") 
  for row in cursor: 
     print "FIRST_NAME = ", row[0] 
     print "LAST_NAME = ", row[1] 
@@ -39,10 +37,10 @@ print "Records insertsuccessfully"
  
  
  #update data 
- cursor.execute("UPDATE EMPLOYEE5 set INCOME=25000 where FIRST_NAME='pragya'") 
+ cursor.execute("UPDATE EMP1 set INCOME=25000 where FIRST_NAME='Ashutosh'") 
  conn.commit() 
  #display data here after updation 
-cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMPLOYEE5 ") 
+cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMP1 ") 
  for row in cursor: 
     print "FIRST_NAME = ", row[0] 
     print "LAST_NAME = ", row[1] 
@@ -55,16 +53,16 @@ print "Records update successfully";
 
  
  # insert value in table 
- cursor.execute ("INSERT INTO EMPLOYEE5(FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME) \ 
-       VALUES ('tina', 'agrawal', 22, 'female', 26000.00 )"); 
-print "Records insertsuccessfully" 
+ cursor.execute ("INSERT INTO EMP1(FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME) \ 
+       VALUES ('vatsal', 'Meena', 20, 'male', 2000.00 )"); 
+print "Records insert successfully" 
  
  
  # delete 
-cursor.execute("DELETE from EMPLOYEE5 where LAST_NAME = 'Gupta'") 
+cursor.execute("DELETE from EMP1 where LAST_NAME = 'Meena'") 
 conn.commit() 
  #display data here after updation 
-cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMPLOYEE5 ") 
+cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMP1 ") 
  for row in cursor: 
     print "FIRST_NAME = ", row[0] 
     print "LAST_NAME = ", row[1] 
