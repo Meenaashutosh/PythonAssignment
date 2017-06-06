@@ -2,7 +2,7 @@
 
 def max_of_three(a,b,c):
     #DocString
-    """ Function to find out the maximum of three numbers """
+    """ finding out the maximum of three numbers """
   if a > b:
         if a > c:
             return a
