@@ -6,3 +6,7 @@ tuple1=tuple[:5]
 tuple2=tuple[5:]
 print tuple1
 print tuple2
+
+#output
+'''
+'''
