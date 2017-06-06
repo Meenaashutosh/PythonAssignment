@@ -1,5 +1,13 @@
-# 5.Define a function that can accept two strings as input and concatenate them and then print it in console.
+#Q5.Define a function that can accept two strings as input and concatenate them and then print it in console.
 
-def  concatenateString(s1,s2):
-	print s1+s2
- concatenateString("2","8")
+
+str1=raw_input("Enter the string1")
+str2=raw_input("Enter the string2")
+str=(str1+str2)
+print(str)
+
+
+'''Output
+Enter the string1 Ashutosh
+Enter the string2 Meena
+Ashutosh Meena'''
