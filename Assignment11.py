@@ -3,6 +3,7 @@
               i/p: Hello Priya 1287
               o/p: LETTERS 10
                      DIGITS 4'''
+
 s = raw_input("Enter the Sentence")
 d={"DIGITS":0, "LETTERS":0}
 for c in s:
@@ -14,3 +15,10 @@ for c in s:
         pass
 print "LETTERS", d["LETTERS"]
 print "DIGITS", d["DIGITS"]
+
+#output
+'''
+Enter the Sentencehi every onehow r you
+LETTERS 17
+DIGITS 0
+'''
