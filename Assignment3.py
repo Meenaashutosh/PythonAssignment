@@ -2,7 +2,7 @@
 
 
 import sqlite3 
-conn = sqlite3.connect('emp4.db') 
+conn = sqlite3.connect('employee.db') 
 print "Opened database successfully"; 
 # prepare a cursor object using cursor() method 
 cursor = conn.cursor()
@@ -14,24 +14,24 @@ sql = """CREATE TABLE EMPLOYEE5 (
          FIRST_NAME  CHAR(20) NOT NULL, 
          LAST_NAME  CHAR(20), 
          AGE INT,   
-          SEX CHAR(1), 
-          INCOME FLOAT )""" 
+         SEX CHAR(1), 
+         INCOME FLOAT )""" 
  
  
 cursor.execute(sql) 
 print "table create successfully" 
 # insert value in table 
 cursor.execute ("INSERT INTO EMPLOYEE5(FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME) \ 
-     VALUES ('pragya', 'Gupta', 24, 'female', 20000.00 )"); 
- print "Records insertsuccessfully" 
+     VALUES ('Ashutosh', 'Meena', 24, 'male', 25000.00 )"); 
+print "Records insertsuccessfully" 
  
  
  #display data here 
  cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMPLOYEE5 ") 
  for row in cursor: 
     print "FIRST_NAME = ", row[0] 
-   print "LAST_NAME = ", row[1] 
-   print "AGE = ", row[2] 
+    print "LAST_NAME = ", row[1] 
+    print "AGE = ", row[2] 
     print "SEX = ", row[3] 
     print "INCOME= ", row[4],"\n" 
  conn.commit() 
@@ -66,7 +66,7 @@ conn.commit()
  #display data here after updation 
 cursor.execute ("SELECT FIRST_NAME, LAST_NAME, AGE, SEX ,INCOME from EMPLOYEE5 ") 
  for row in cursor: 
-   print "FIRST_NAME = ", row[0] 
+    print "FIRST_NAME = ", row[0] 
     print "LAST_NAME = ", row[1] 
     print "AGE = ", row[2] 
     print "SEX = ", row[3] 
