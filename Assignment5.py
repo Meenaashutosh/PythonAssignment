@@ -7,7 +7,9 @@ str=(str1+str2)
 print(str)
 
 
-'''Output
-Enter the string1 Ashutosh
-Enter the string2 Meena
-Ashutosh Meena'''
+#Output
+'''
+Enter the string1Ashutosh
+Enter the string2Meena
+AshutoshMeena
+'''
